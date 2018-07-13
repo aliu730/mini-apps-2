@@ -1,6 +1,7 @@
-const dataReducer = (state, action) => {
+const dataReducer = (state = { data: [] }, action) => {
   if (action.type === 'CHANGE_DATA') {
-    return action.data;
+    // console.log(action.data);
+    return { ...state, data: action.data };
   }
   return state;
 };

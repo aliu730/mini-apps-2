@@ -1,25 +1,39 @@
 import React from 'react';
-import Chart from './chart';
-import axios from 'axios';
+import { Bar, Line, Pie } from 'react-chartjs-2';
 
 class App extends React.Component {
-
-  grabData() {
-    axios.get('/grabData')
-      .then((response) => {
-        console.log(response.data);
-      });
-  }
-
   componentDidMount() {
-    this.grabData();
+    const { changeData } = this.props;
+    changeData();
   }
+
   render() {
-    // console.log(Chart);
+    const { data } = this.props;
+    if (data.length !== 0) {
+      const { bpi } = data;
+      const dates = Object.keys(bpi);
+      const dataNums = [];
+      for (let i = 0; i < dates.length; i += 1) {
+        dataNums.push(bpi[dates[i]]);
+      }
+      return (
+        <div className="container-1">
+          Rendering..
+          <Bar
+            data={{
+              labels: dates,
+              datasets: [{ data: dataNums }],
+            }}
+          />
+          <span>
+            Powered by CoinDesk
+          </span>
+        </div>
+      );
+    }
     return (
-      <div className="container-1">
-        App Renders
-        <Chart />
+      <div>
+        Rendering
       </div>
     );
   }
