@@ -1,0 +1,64 @@
+.container-1{
+  display:flex;
+  border: solid 1px black;
+  width: 1000px;
+  height: 80px;
+}
+.container-Header{
+  display:flex;
+  border: solid 1px black;
+  width: 1000px;
+  height: 30px;
+}
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8, .box-9, .box-10, .hdcpScore, .MaxPossible {
+  flex: 1;
+  display: flex;
+  border: solid 1px black;
+}
+.box-1h, .box-2h, .box-3h, .box-4h, .box-5h, .box-6h, .box-7h, .box-8h, .box-9h, .box-10h, .hdcpScoreh, .MaxPossibleh {
+  flex: 1;
+  border: solid 1px black;
+  text-align: center;
+}
+
+.keyContainer {
+  width: 200px;
+  height: 200px;
+}
+
+.MaxPossibleh {
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.row-1, .row-2, .row-3, .row-4 {
+  display:flex;
+}
+#seven, #eight, #nine, #four, #five, #six, #three, #two, #one {
+  flex:1;
+  width: 10px;
+  height: 40px;
+}
+#zero, #ten {
+  flex: 1;
+  height: 40px;
+}
+
+.score-1box1, .score-2box1, .score-3box1, .score-4box1, .score-5box1, .score-6box1, .score-7box1, .score-8box1, .score-9box1 {
+  /* border: solid 1px black; */
+  height: 40px;
+  width: 40px;
+}
+.score-1box2, .score-2box2, .score-3box2, .score-4box2, .score-5box2, .score-6box2, .score-7box2, .score-8box2, .score-9box2{
+  border: solid 1px black;
+  height: 40px;
+  width: 40px;
+}
+
+.score-10box1, .score-10box2, .score-10box3 {
+  flex: 1;
+  height: 40px;
+}
+.score-10box2, .score-10box3 {
+  border: solid 1px gray;
+} 
